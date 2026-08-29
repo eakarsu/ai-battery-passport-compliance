@@ -1,0 +1,1433 @@
+{
+  "id": "ai-battery-passport-compliance",
+  "title": "BatteryPassport Ops",
+  "tagline": "Battery identity, lifecycle data, QR publication, access, and conformity evidence",
+  "industry": "Battery Regulation Compliance",
+  "port": 4537,
+  "accent": "#15803d",
+  "valueLabel": "Battery units governed",
+  "value": "480K",
+  "workflows": [
+    {
+      "id": "scope",
+      "title": "Battery Passport Scope",
+      "description": "Evaluate battery passport scope with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Battery Passport Scope Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Battery Units",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Battery Passport Scope Reference STD-2026-104",
+            "entity": "Battery Model STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Battery Passport Scope Reference RISK-2026-227",
+            "entity": "Battery Model RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Battery Passport Scope Reference EXC-2026-319",
+            "entity": "Battery Model EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "supplier-data",
+      "title": "Supplier Data Collection",
+      "description": "Evaluate supplier data collection with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Supplier Data Collection Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Supplier Coverage",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Supplier Data Collection Reference STD-2026-104",
+            "entity": "Battery Model STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Supplier Data Collection Reference RISK-2026-227",
+            "entity": "Battery Model RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Supplier Data Collection Reference EXC-2026-319",
+            "entity": "Battery Model EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "identity",
+      "title": "Battery Identity and Unique ID",
+      "description": "Evaluate battery identity and unique id with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Battery Identity and Unique ID Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Identifiers Issued",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Battery Identity and Unique ID Reference STD-2026-104",
+            "entity": "Battery Model STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Battery Identity and Unique ID Reference RISK-2026-227",
+            "entity": "Battery Model RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Battery Identity and Unique ID Reference EXC-2026-319",
+            "entity": "Battery Model EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "performance",
+      "title": "Performance and Durability Data",
+      "description": "Evaluate performance and durability data with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Performance and Durability Data Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Data Completeness",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Performance and Durability Data Reference STD-2026-104",
+            "entity": "Battery Model STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Performance and Durability Data Reference RISK-2026-227",
+            "entity": "Battery Model RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Performance and Durability Data Reference EXC-2026-319",
+            "entity": "Battery Model EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "circularity",
+      "title": "Repair and Recycling Information",
+      "description": "Evaluate repair and recycling information with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Repair and Recycling Information Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Circularity Score",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Repair and Recycling Information Reference STD-2026-104",
+            "entity": "Battery Model STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 88,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Repair and Recycling Information Reference RISK-2026-227",
+            "entity": "Battery Model RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 42,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Repair and Recycling Information Reference EXC-2026-319",
+            "entity": "Battery Model EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 67,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "qr",
+      "title": "QR and Passport Publication",
+      "description": "Evaluate qr and passport publication with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "QR and Passport Publication Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Passports Published",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "QR and Passport Publication Reference STD-2026-104",
+            "entity": "Battery Model STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "QR and Passport Publication Reference RISK-2026-227",
+            "entity": "Battery Model RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "QR and Passport Publication Reference EXC-2026-319",
+            "entity": "Battery Model EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "access",
+      "title": "Role-Based Passport Access",
+      "description": "Evaluate role-based passport access with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Role-Based Passport Access Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Authorized Parties",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Role-Based Passport Access Reference STD-2026-104",
+            "entity": "Battery Model STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Role-Based Passport Access Reference RISK-2026-227",
+            "entity": "Battery Model RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Role-Based Passport Access Reference EXC-2026-319",
+            "entity": "Battery Model EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "conformity",
+      "title": "Passport Conformity Audit",
+      "description": "Evaluate passport conformity audit with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Passport Conformity Audit Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Exceptions Open",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Passport Conformity Audit Reference STD-2026-104",
+            "entity": "Battery Model STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Passport Conformity Audit Reference RISK-2026-227",
+            "entity": "Battery Model RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Passport Conformity Audit Reference EXC-2026-319",
+            "entity": "Battery Model EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "scope",
+      "title": "Battery Passport Scope Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for battery passport scope.",
+      "table": "op_scope",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Battery Passport Scope Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Battery Units",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "supplier-data",
+      "title": "Supplier Data Collection Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for supplier data collection.",
+      "table": "op_supplier_data",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Supplier Data Collection Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Supplier Coverage",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "identity",
+      "title": "Battery Identity and Unique ID Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for battery identity and unique id.",
+      "table": "op_identity",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Battery Identity and Unique ID Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Identifiers Issued",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "performance",
+      "title": "Performance and Durability Data Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for performance and durability data.",
+      "table": "op_performance",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Performance and Durability Data Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Data Completeness",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "circularity",
+      "title": "Repair and Recycling Information Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for repair and recycling information.",
+      "table": "op_circularity",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Repair and Recycling Information Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Circularity Score",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "qr",
+      "title": "QR and Passport Publication Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for qr and passport publication.",
+      "table": "op_qr",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "QR and Passport Publication Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Passports Published",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "access",
+      "title": "Role-Based Passport Access Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for role-based passport access.",
+      "table": "op_access",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Role-Based Passport Access Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Authorized Parties",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "conformity",
+      "title": "Passport Conformity Audit Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for passport conformity audit.",
+      "table": "op_conformity",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Passport Conformity Audit Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Exceptions Open",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "model-master",
+      "title": "Battery Model Registry",
+      "description": "Controlled battery model registry records supporting operational decisions and audit evidence.",
+      "table": "op_model_master",
+      "columns": [
+        {
+          "key": "recordId",
+          "label": "Battery Model Registry ID",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_recordId"
+        },
+        {
+          "key": "name",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_name"
+        },
+        {
+          "key": "status",
+          "label": "Status",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Active",
+            "Pending",
+            "Suspended",
+            "Retired"
+          ],
+          "dbKey": "data_status"
+        },
+        {
+          "key": "effectiveDate",
+          "label": "Effective Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_effectiveDate"
+        }
+      ]
+    },
+    {
+      "id": "supplier-master",
+      "title": "Battery Supplier Directory",
+      "description": "Controlled battery supplier directory records supporting operational decisions and audit evidence.",
+      "table": "op_supplier_master",
+      "columns": [
+        {
+          "key": "recordId",
+          "label": "Battery Supplier Directory ID",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_recordId"
+        },
+        {
+          "key": "name",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_name"
+        },
+        {
+          "key": "status",
+          "label": "Status",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Active",
+            "Pending",
+            "Suspended",
+            "Retired"
+          ],
+          "dbKey": "data_status"
+        },
+        {
+          "key": "effectiveDate",
+          "label": "Effective Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_effectiveDate"
+        }
+      ]
+    },
+    {
+      "id": "material-master",
+      "title": "Material and Chemistry Library",
+      "description": "Controlled material and chemistry library records supporting operational decisions and audit evidence.",
+      "table": "op_material_master",
+      "columns": [
+        {
+          "key": "recordId",
+          "label": "Material and Chemistry Library ID",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_recordId"
+        },
+        {
+          "key": "name",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_name"
+        },
+        {
+          "key": "status",
+          "label": "Status",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Active",
+            "Pending",
+            "Suspended",
+            "Retired"
+          ],
+          "dbKey": "data_status"
+        },
+        {
+          "key": "effectiveDate",
+          "label": "Effective Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_effectiveDate"
+        }
+      ]
+    },
+    {
+      "id": "rule-master",
+      "title": "Passport Data Requirement Library",
+      "description": "Controlled passport data requirement library records supporting operational decisions and audit evidence.",
+      "table": "op_rule_master",
+      "columns": [
+        {
+          "key": "recordId",
+          "label": "Passport Data Requirement Library ID",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_recordId"
+        },
+        {
+          "key": "name",
+          "label": "Battery Model",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_name"
+        },
+        {
+          "key": "status",
+          "label": "Status",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Active",
+            "Pending",
+            "Suspended",
+            "Retired"
+          ],
+          "dbKey": "data_status"
+        },
+        {
+          "key": "effectiveDate",
+          "label": "Effective Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_effectiveDate"
+        }
+      ]
+    }
+  ],
+  "domainProduct": {
+    "home": "BatteryPassport Ops Command Center",
+    "context": "Battery identity, lifecycle data, QR publication, access, and conformity evidence",
+    "features": [
+      {
+        "id": "scope-command",
+        "title": "Battery Passport Scope",
+        "description": "Coordinate battery passport scope across controlled source data, accountable review, measurable exposure, and retained evidence.",
+        "view": "evidence",
+        "modules": [
+          "scope",
+          "model-master"
+        ],
+        "actions": [
+          {
+            "id": "approve-scope",
+            "label": "Approve Battery Passport Scope",
+            "nextStatus": "Approved",
+            "auditDetail": "Approved battery passport scope with source evidence and reviewer attribution."
+          },
+          {
+            "id": "escalate-scope",
+            "label": "Escalate Battery Passport Scope",
+            "nextStatus": "Investigating",
+            "auditDetail": "Escalated battery passport scope for exception remediation and additional evidence."
+          }
+        ]
+      },
+      {
+        "id": "supplier-data-command",
+        "title": "Supplier Data Collection",
+        "description": "Coordinate supplier data collection across controlled source data, accountable review, measurable exposure, and retained evidence.",
+        "view": "reconciliation",
+        "modules": [
+          "supplier-data",
+          "supplier-master"
+        ],
+        "actions": [
+          {
+            "id": "approve-supplier-data",
+            "label": "Approve Supplier Data Collection",
+            "nextStatus": "Approved",
+            "auditDetail": "Approved supplier data collection with source evidence and reviewer attribution."
+          },
+          {
+            "id": "escalate-supplier-data",
+            "label": "Escalate Supplier Data Collection",
+            "nextStatus": "Investigating",
+            "auditDetail": "Escalated supplier data collection for exception remediation and additional evidence."
+          }
+        ]
+      },
+      {
+        "id": "identity-command",
+        "title": "Battery Identity and Unique ID",
+        "description": "Coordinate battery identity and unique id across controlled source data, accountable review, measurable exposure, and retained evidence.",
+        "view": "control",
+        "modules": [
+          "identity",
+          "material-master"
+        ],
+        "actions": [
+          {
+            "id": "approve-identity",
+            "label": "Approve Battery Identity and Unique ID",
+            "nextStatus": "Approved",
+            "auditDetail": "Approved battery identity and unique id with source evidence and reviewer attribution."
+          },
+          {
+            "id": "escalate-identity",
+            "label": "Escalate Battery Identity and Unique ID",
+            "nextStatus": "Investigating",
+            "auditDetail": "Escalated battery identity and unique id for exception remediation and additional evidence."
+          }
+        ]
+      },
+      {
+        "id": "performance-command",
+        "title": "Performance and Durability Data",
+        "description": "Coordinate performance and durability data across controlled source data, accountable review, measurable exposure, and retained evidence.",
+        "view": "deadline",
+        "modules": [
+          "performance",
+          "rule-master"
+        ],
+        "actions": [
+          {
+            "id": "approve-performance",
+            "label": "Approve Performance and Durability Data",
+            "nextStatus": "Approved",
+            "auditDetail": "Approved performance and durability data with source evidence and reviewer attribution."
+          },
+          {
+            "id": "escalate-performance",
+            "label": "Escalate Performance and Durability Data",
+            "nextStatus": "Investigating",
+            "auditDetail": "Escalated performance and durability data for exception remediation and additional evidence."
+          }
+        ]
+      },
+      {
+        "id": "circularity-command",
+        "title": "Repair and Recycling Information",
+        "description": "Coordinate repair and recycling information across controlled source data, accountable review, measurable exposure, and retained evidence.",
+        "view": "board",
+        "modules": [
+          "circularity",
+          "qr"
+        ],
+        "actions": [
+          {
+            "id": "approve-circularity",
+            "label": "Approve Repair and Recycling Information",
+            "nextStatus": "Approved",
+            "auditDetail": "Approved repair and recycling information with source evidence and reviewer attribution."
+          },
+          {
+            "id": "escalate-circularity",
+            "label": "Escalate Repair and Recycling Information",
+            "nextStatus": "Investigating",
+            "auditDetail": "Escalated repair and recycling information for exception remediation and additional evidence."
+          }
+        ]
+      }
+    ]
+  },
+  "integrations": [
+    {
+      "id": "integration-1",
+      "name": "Product lifecycle management",
+      "category": "Domain data source",
+      "mode": "Read-only demo connector"
+    },
+    {
+      "id": "integration-2",
+      "name": "Battery management telemetry",
+      "category": "Domain data source",
+      "mode": "Read-only demo connector"
+    },
+    {
+      "id": "integration-3",
+      "name": "Supplier portal",
+      "category": "Domain data source",
+      "mode": "Read-only demo connector"
+    },
+    {
+      "id": "integration-4",
+      "name": "Digital product passport registry",
+      "category": "Domain data source",
+      "mode": "Read-only demo connector"
+    },
+    {
+      "id": "integration-5",
+      "name": "Recycling partner feed",
+      "category": "Domain data source",
+      "mode": "Read-only demo connector"
+    }
+  ],
+  "featureCount": 40,
+  "seededRecords": 300,
+  "demoUsers": 3,
+  "apiPort": 5537,
+  "dbName": "profit_ai_battery_passport_compliance"
+}
